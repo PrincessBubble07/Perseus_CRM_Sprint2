@@ -15,10 +15,6 @@ public class LoginStepDefs {
         Driver.getDriver().get(ConfigurationReader.getProperty("url"));
     }
 
-    @Given("the user logged in with username as {string} and password as {string}")
-    public void theUserLoggedInWithUsernameAsAndPasswordAs(String username, String password) {
-        //loginPage.login(username, password);
-    }
 
     @Given("the user logged in as {string}")
     public void theUserLoggedInAs(String userType) {

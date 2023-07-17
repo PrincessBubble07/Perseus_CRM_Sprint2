@@ -6,8 +6,8 @@ Feature: Users should be able to login
 
   @wip
   Scenario: Verify login with different user types
-    Given the user logged in as "hr"
-    Given the user logged in with username as "hr29@cybertekschool.com" and password as "UserUser"
+    Given the user logged in as "marKeTing"
+
 
 
 
