@@ -33,8 +33,8 @@ public class LoginPage {
         if (userType.contains(" ")) {
             userType = userType.replace(" ", "_");
         }
-        String username = ConfigurationReader.getProperty(userType + "_username");
-        String password = ConfigurationReader.getProperty(userType + "_password");
+        String username = ConfigurationReader.getProperty(userType.toLowerCase() + "_username");
+        String password = ConfigurationReader.getProperty(userType.toLowerCase() + "_password");
 
         login(username, password);
     }
