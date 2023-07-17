@@ -2,6 +2,7 @@ package com.blue_CRM.utilities;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
@@ -47,6 +48,14 @@ public class Driver {
                 case "firefox":
                     //WebDriverManager.firefoxdriver().setup();
                     driverPool.set(new FirefoxDriver());
+                    driverPool.get().manage().window().maximize();
+                    driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+                    break;
+                case "headless-chrome":
+                    // WebDriverManager.chromedriver().setup();
+                    ChromeOptions option = new ChromeOptions();
+                    option.addArguments("--headless=new");
+                    driverPool.set(new ChromeDriver(option));
                     driverPool.get().manage().window().maximize();
                     driverPool.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
                     break;
