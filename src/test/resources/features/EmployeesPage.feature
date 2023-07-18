@@ -5,9 +5,9 @@ Feature: Employees page functionality
     Given User is on the homepage
     Then User click the employees page
 
-  Scenario: Employees page modules verification
+  Scenario: Verify the modules in the Employees page
     Given User is on the employees page
-    Then User should see below modules on the employees page
+    Then User should see  the following modules on the employees page
 
       | Company Structure   |
       | Find Employee       |
@@ -18,5 +18,8 @@ Feature: Employees page functionality
       | Birthdays           |
       | New page            |
 
-    Scenario: Verify user view the company structure by default
-      Then User clicks employees module
+  Scenario: Verify the default module after clicking the Employees Module
+    Given User is on the Employees page
+    When User clicks on the Employees Module
+    Then User should see the company structure
+
