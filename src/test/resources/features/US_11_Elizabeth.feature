@@ -5,6 +5,7 @@ Feature: User should be able to send appreciation by clicking on Appreciation ta
 		Given the user is on the login page
 		Given the user logged in as "hr"
 
+
 	
 	@B29G38-168
 	Scenario:  Verify user should be able to send an appreciation by filling in the mandatory fields.
@@ -34,4 +35,4 @@ Feature: User should be able to send appreciation by clicking on Appreciation ta
 		Given the user is on the login page
 		Given the user logged in as "hr"
 		When User click "Send" button
-		Then User able to see error message "The message title is not specified."
+		Then User able to see error message "Please specify at least one person."
