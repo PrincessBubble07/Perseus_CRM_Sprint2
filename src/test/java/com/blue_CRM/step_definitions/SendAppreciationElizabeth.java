@@ -18,6 +18,16 @@ public class SendAppreciationElizabeth {
 
     }
 
+    @Then("User able to cancel sending appreciation")
+    public void user_able_to_cancel_sending_appreciation() {
+
+    }
+
+    @Then("User able to see error message {string}")
+    public void user_able_to_see_error_message(String string) {
+
+    }
+
 
 
 
