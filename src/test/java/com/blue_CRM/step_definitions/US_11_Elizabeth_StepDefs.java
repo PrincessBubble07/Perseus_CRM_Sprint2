@@ -1,6 +1,7 @@
 package com.blue_CRM.step_definitions;
 
 import com.blue_CRM.pages.US_11_ElizabethPage;
+import com.blue_CRM.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -38,10 +39,9 @@ public class US_11_Elizabeth_StepDefs {
 
     @Then("User should be able to send an appreciation by filling in the mandatory fields.")
     public void user_should_be_able_to_send_an_appreciation_by_filling_in_the_mandatory_fields() {
-      us11ElizabethPage.SendBtn.click();
+
 
     }
-
 
 
     @Then("User able to cancel sending appreciation")
@@ -50,16 +50,29 @@ public class US_11_Elizabeth_StepDefs {
 
     }
 
-  @When("User click on {string} tab")
-  public void user_click_on_tab(String string) {
+     @When("User click on Send button")
+     public void user_click_on_Send_button() {
+       us11ElizabethPage.SendBtn.click();
+     }
+
+    @Then ("User should see error message, the message title is not specified ")
+    public void user_able_to_see_ErrorMessage1() {
+      String actualErrorMessage = us11ElizabethPage.ErrorMessage1.getText();
+
+      String expectedTitle = "The message title is not specified.";
+      Assert.assertEquals(actualErrorMessage,expectedTitle);
+    }
 
 
 
+
+  @When("User click delete default All Employers delivery")
+  public void user_click_delete_default_all_employers_delivery_button() {
+      us11ElizabethPage.AllEmployersCancelSign.click();
   }
-  @When("User click {string} button")
-  public void user_click_button(String string) {
 
-  }
+
+
 
 
 
