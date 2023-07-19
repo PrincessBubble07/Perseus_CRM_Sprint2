@@ -2,12 +2,12 @@ package com.blue_CRM.step_definitions;
 
 import com.blue_CRM.pages.US_08_LiudaPage;
 import com.blue_CRM.utilities.BrowserUtils;
-import com.blue_CRM.utilities.ConfigurationReader;
-import com.blue_CRM.utilities.Driver;
+
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
+
 import org.openqa.selenium.By;
+;
 
 public class US_08_LiudaStepDefs {
 
@@ -27,17 +27,19 @@ public class US_08_LiudaStepDefs {
 
         us_08_liuda.addDepartmentButton.isDisplayed();
 
-        System.out.println("Driver.getDriver().getWindowHandle() = " + Driver.getDriver().getWindowHandle());
 
-        //us_08_liuda.addDepartmentButton.click();
+        us_08_liuda.AddDeppartClik.click();
 
-       // us_08_liuda.addDepartmentWindow.isSelected();
+        us_08_liuda.addDepartmentWindow.isSelected();
 
-       // us_08_liuda.departmentNameInputBox.click();
-       // us_08_liuda.departmentNameInputBox.sendKeys("Developers");
+        us_08_liuda.departmentNameInputBox.click();
+        us_08_liuda.departmentNameInputBox.sendKeys("Developers");
+        us_08_liuda.ParentDepartmentList.click();
+        us_08_liuda.instructorsDepartment.click();
+        us_08_liuda.instructorsDepartment.isSelected();
 
 
-
+        us_08_liuda.addButton.click();
 
     }
     @Then("There is no “ADD DEPARTMENT” option for Helpdesk and Marketing user.")

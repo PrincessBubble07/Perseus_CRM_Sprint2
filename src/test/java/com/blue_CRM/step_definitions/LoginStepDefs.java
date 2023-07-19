@@ -4,6 +4,8 @@ import com.blue_CRM.pages.LoginPage;
 import com.blue_CRM.utilities.ConfigurationReader;
 import com.blue_CRM.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 
 public class LoginStepDefs {
 
@@ -24,4 +26,5 @@ public class LoginStepDefs {
     public void theUserLoggedInAs(String userType) {
         loginPage.loginDynamic(userType);
     }
+
 }
