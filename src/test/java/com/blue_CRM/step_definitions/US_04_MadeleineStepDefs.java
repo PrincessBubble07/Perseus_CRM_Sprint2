@@ -41,10 +41,12 @@ public class US_04_MadeleineStepDefs {
     @When("the user adds a recipient")
     public void the_user_adds_a_recipient() {
         us_04_madeleinePage.addRecipientLink.click();
-        us_04_madeleinePage.enterRecipientTextBox.sendKeys(ConfigurationReader.getProperty("test_recipient"));
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        us_04_madeleinePage.enterRecipientTextBox.sendKeys(Keys.ENTER);
-        Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        us_04_madeleinePage.enterRecipientTextBox.sendKeys(ConfigurationReader.getProperty("test_recipient") + Keys.ENTER);
+        //Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        //WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+       // wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(By.xpath("//div[@class='bx-finder-box-item-t7-name']"), 0));
+        //Driver.getDriver().manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+
 
     }
 
