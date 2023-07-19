@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class US_08_LiudaPage {
 
 
@@ -26,7 +28,7 @@ public class US_08_LiudaPage {
     @FindBy(xpath = "//span[.='Add department']")
     public WebElement addDepartmentButton;
 
-    @FindBy(xpath = "//a[@class='webform-small-button webform-small-button-blue webform-small-button-add']")
+    @FindBy(xpath = "//span[@class='webform-small-button-icon']")
     public WebElement AddDeppartClik;
 
     @FindBy(xpath = "//span[@class=\"popup-window-titlebar-text\"]")
@@ -38,6 +40,25 @@ public class US_08_LiudaPage {
     @FindBy(id="IBLOCK_SECTION_ID")
     public WebElement ParentDepartmentList;
 
+    @FindBy(xpath = "//option[@value='339']")
+    public WebElement instructorsDepartment;
+
+    @FindBy(id="single-user-choice")
+    public WebElement selectFromStrLink;
+
+    @FindBy(xpath = "(//span[@class='finder-box-tab-text'])[2]")
+    public WebElement companyBox;
+
+    @FindBy(xpath = "(//div[@class='company-department-employee-name'])[201]")
+    public WebElement supervisorNameNadir;
+
+
+    @FindBy(xpath = "//div[@class='popup-window-hr popup-window-buttons-hr']")
+    public List<WebElement> popupWindow;
+
+
+    @FindBy(xpath = "//span[@class='popup-window-button popup-window-button-accept']")
+    public WebElement addButton;
 
 
 
