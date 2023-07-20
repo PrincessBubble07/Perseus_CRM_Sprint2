@@ -17,7 +17,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/blue_CRM/step_definitions",
         dryRun = false,
-        tags = " @us_08",
+        tags = " @wip",
         publish = true //generating a report with public link
 )
 

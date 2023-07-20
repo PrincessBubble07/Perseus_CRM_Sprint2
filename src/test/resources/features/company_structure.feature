@@ -1,11 +1,11 @@
-@us_08
+@B29G38-190
 Feature: Users should be able to use functions on Company Structure under Employee menu.
 
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-
+@B29G38-188
   Scenario Outline: Menu Options for hr user
     Given the user logged in as "<user>"
     Then the user see the Company Structure
@@ -17,7 +17,7 @@ Feature: Users should be able to use functions on Company Structure under Employ
 
 
 
-
+@B29G38-189
   Scenario Outline: Menu Options for helpdesk and marketing users
     Given the user logged in as "<user>"
     Then the user see the Company Structure
