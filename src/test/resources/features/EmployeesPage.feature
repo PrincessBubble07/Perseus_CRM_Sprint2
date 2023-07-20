@@ -1,22 +1,27 @@
-Feature: Employees page functionality
-  Agile Story: User should be able to access the Employees page
+Feature: As a user, I want to access the Employee page
 
-  Background: User is already logged in
-    Given User is on the homepage
-    Then User click the employees page
 
-  Scenario: Verify the modules in the Employees page
-    Given User is on the employees page
-    Then User should see  the following modules on the employees page
+  Background: User is already on the log in page
+    Given the user is on the login page
 
-      | Company Structure   |
-      | Find Employee       |
-      | Telephone Directory |
-      | Staff Changes       |
-      | Efficiency Report   |
-      | Honored Employees   |
-      | Birthdays           |
-      | New page            |
+  Scenario Outline: Verify users can access the Employee page
+    Given the user logged in as "<user>"
+    When the user click on Employees
+    Then the user should be able to see Company Structure on the Employee page
+    Then the user should be able to see Find Employee on the Employee page
+    Then the user should be able to see Telephone Directory on the Employee page
+    Then the user should be able to see Staff Changes on the Employee page
+    Then the user should be able to see Efficiency on the Employee page
+    Then the user should be able to see Honored Employees on the Employee page
+    Then the user should be able to see Birthdays on the Employee page
+    Then the user should be able to see New page on the Employee page
+
+    Examples:
+      | user |
+      | hr |
+      | help desk |
+      | marketing |
+
 
   Scenario: Verify the default module after clicking the Employees Module
     Given User is on the Employees page
