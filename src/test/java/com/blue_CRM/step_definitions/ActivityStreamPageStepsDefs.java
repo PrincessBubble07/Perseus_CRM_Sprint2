@@ -1,6 +1,6 @@
 package com.blue_CRM.step_definitions;
 
-import com.blue_CRM.pages.US_09_LiudaPage;
+import com.blue_CRM.pages.ActivityStreamPage;
 import com.blue_CRM.utilities.BrowserUtils;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -10,24 +10,24 @@ import org.openqa.selenium.WebElement;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US_09_LiudaStepsDefs {
+public class ActivityStreamPageStepsDefs {
 
-    US_09_LiudaPage us_09_liuda = new US_09_LiudaPage();
+    ActivityStreamPage us_09_liuda = new ActivityStreamPage();
 
 
-    @Then("the user should be able to see Activity Stream link")
-    public void the_user_should_be_able_to_see_activity_stream_link() {
+    @Then("user sees Activity Stream link")
+    public void user_sees_activity_stream_link() {
 
         System.out.println("Activity Stream Link.isDisplayed() = " + us_09_liuda.activityStreamLink.isDisplayed());
     }
-    @Then("the user should be able to click Activity Stream link")
-    public void the_user_should_be_able_to_click_activity_stream_link() {
+    @Then("user click Activity Stream link")
+    public void user_click_activity_stream_link() {
 
         us_09_liuda.activityStreamLink.click();
 
     }
-    @Then("user should be able to see following modules")
-    public void user_should_be_able_to_see_following_modules(List<String> expectedModules) {
+    @Then("user sees following modules")
+    public void user_sees_following_modules(List<String> expectedModules) {
 
         BrowserUtils.sleep(3);
         List<String> actualModules = new ArrayList<>();
@@ -45,8 +45,8 @@ public class US_09_LiudaStepsDefs {
         us_09_liuda.MORELink.click();
 
     }
-    @Then("the users view the following options under the MORE tab")
-    public void the_users_view_the_following_options_under_the_more_tab(List<String> expectedModules) {
+    @Then("user views the following options under the MORE tab")
+    public void user_views_the_following_options_under_the_more_tab(List<String> expectedModules) {
 
         BrowserUtils.sleep(3);
         List<String> actualModules = new ArrayList<>();
@@ -57,8 +57,6 @@ public class US_09_LiudaStepsDefs {
 
         Assert.assertEquals(expectedModules, actualModules);
     }
-
-
 
 
     }

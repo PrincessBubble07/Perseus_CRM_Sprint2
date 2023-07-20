@@ -7,10 +7,10 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class US_08_LiudaPage {
+public class CompanyStructurePage {
 
 
-    public US_08_LiudaPage(){
+    public CompanyStructurePage(){
         PageFactory.initElements(Driver.getDriver(), this);
 
     }
@@ -19,7 +19,7 @@ public class US_08_LiudaPage {
     public WebElement Employeeslink;
 
     @FindBy(id="pagetitle")
-    public WebElement pageTitle;
+    public WebElement CompanyStructurePageTitle;
 
     @FindBy(id="bx_visual_structure")
     public WebElement companyStructure;
@@ -40,8 +40,8 @@ public class US_08_LiudaPage {
     @FindBy(id="IBLOCK_SECTION_ID")
     public WebElement ParentDepartmentList;
 
-    @FindBy(xpath = "//option[@value='339']")
-    public WebElement instructorsDepartment;
+    @FindBy(xpath = "//option[@value=129]")
+    public WebElement SomeDepartment;
 
     @FindBy(id="single-user-choice")
     public WebElement selectFromStrLink;

@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US_06_LiudaPage {
+public class AddLinkInMessagePage {
 
-    public US_06_LiudaPage(){
+    public AddLinkInMessagePage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
