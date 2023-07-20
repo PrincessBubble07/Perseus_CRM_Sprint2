@@ -4,7 +4,7 @@ Feature: Users should be able to see all the options on the Activity Stream page
 Background: User is already in the log in page
 Given the user is on the login page
 
-@B29G38-183  @B29G38-184
+@B29G38-183 @B29G38-184
 Scenario Outline: Menu Options for users
 Given the user logged in as "<user>"
 Then user sees Activity Stream link

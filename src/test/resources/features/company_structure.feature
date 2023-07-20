@@ -1,7 +1,7 @@
 @B29G38-190
 Feature: Users should be able to use functions on Company Structure under Employee menu.
 
-
+##
   Background: User is already in the log in page
     Given the user is on the login page
 

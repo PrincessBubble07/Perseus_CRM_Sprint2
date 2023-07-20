@@ -1,7 +1,7 @@
 @B29G38-199
 Feature: Users should be able to add link in message.
 
-
+##
   Background: User is already in the log in page
     Given the user is on the login page
 
