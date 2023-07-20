@@ -15,12 +15,14 @@ public class US_10_Creat_a_Poll_osama_Stepdefs {
         poll.poll.click();
     }
 
-    @Then("user sees the delivery All employees by default.")
-    public void user_sees_the_delivery_all_employees_by_default() {
+
+    @Then("user sees the delivery All employees by default oz.")
+    public void userSeesTheDeliveryAllEmployeesByDefaultOz() {
         String allEmployeesExpected = "All employees";
         String allEmployeesActual = poll.allEmployees.getText();
         Assert.assertEquals(allEmployeesExpected, allEmployeesActual);
     }
+
 
     @Then("User creates a poll by adding {string} title and {string} and {string} and multiple answers{string}.")
     public void userCreatesAPollByAddingTitleAndAndMultipleAnswers(String message, String question, String answer,String recipient) {

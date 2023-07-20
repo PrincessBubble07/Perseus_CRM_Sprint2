@@ -10,7 +10,7 @@ Feature: As a user, I should be able to create a poll
 
   @B29G38-163
   Scenario: The delivery should be to 'All employees' by default.
-    Then user sees the delivery All employees by default.
+    Then user sees the delivery All employees by default oz.
 
 
   @B29G38-164
