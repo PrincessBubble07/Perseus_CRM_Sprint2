@@ -1,6 +1,8 @@
 @B29G38-196
 Feature: As a user, I should be able to upload files and pictures as messages
-
+Background:
+  Scenario: Verify login with different user types
+    Given the user logged in as "hr"
 
   @B29G38-193
   Scenario: User should be able to upload files and pictures. Supported file formats .pdf, .txt, .jpeg, .png, .docx
