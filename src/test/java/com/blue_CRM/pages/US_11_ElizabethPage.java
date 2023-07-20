@@ -35,8 +35,8 @@ public class US_11_ElizabethPage {
     @FindBy(xpath = "//span[@class='feed-add-post-destination-text']")
     public WebElement allEmployees;
 
-    @FindBy(xpath = "//span[@class='feed-add-info-text']")
-    public WebElement ErrorMessage1; //The message title is not specified
+    @FindBy(xpath = "//span[text()='The message title is not specified']")
+    public WebElement ErrorMessage1;
 
     @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement AllEmployersCancelSign;
@@ -53,6 +53,6 @@ public class US_11_ElizabethPage {
 }
 
 
-
+//
 
 
