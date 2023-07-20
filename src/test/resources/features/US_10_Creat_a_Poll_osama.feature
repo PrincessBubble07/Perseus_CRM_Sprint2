@@ -16,7 +16,7 @@ Feature: As a user, I should be able to create a poll
   @B29G38-164
   Scenario: User should be able to create a poll by adding questions and multiple answers.
     When User creates a poll by adding "76yt" title and "how old are you?" and "recipient" and multiple answers"45".
-    Then user clicks send button.
+    And user clicks send button.
 
 
   @B29G38-165
@@ -29,5 +29,5 @@ Feature: As a user, I should be able to create a poll
   Scenario: Mandatory fields: Message title, recipient, 1 question, 1 answer
     When User creates a poll by adding "8765" title and "how old are you?" and "" and multiple answers"34".
     When user does not specify "recipient"
-    When user clicks send button.
+    And user clicks send button.
     Then user sees this Error message "Please specify at least one person."
