@@ -67,9 +67,6 @@ public class US_05_uploadFiles_osama_Stepdefs {
         }
     }
 
-    @Then("user sees the file deleted osama")
-    public void user_sees_the_file_deleted_osama() {
 
-    }
 
 }

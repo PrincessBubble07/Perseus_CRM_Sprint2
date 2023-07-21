@@ -70,5 +70,8 @@ public class US_10_Creat_a_Poll_osama_Stepdefs {
     }
 
 
+    @Then("user sees this Error message")
+    public void userSeesThisErrorMessage() {
 
+    }
 }

@@ -29,5 +29,3 @@ Feature: As a user, I should be able to upload files and pictures as messages
   @B29G38-195
   Scenario: User should be able to remove files and images at any time before sending
     And user clicks x button osama
-    Then user sees the file deleted osama
-

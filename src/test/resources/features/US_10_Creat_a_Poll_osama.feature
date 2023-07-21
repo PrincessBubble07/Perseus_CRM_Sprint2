@@ -15,7 +15,7 @@ Feature: As a user, I should be able to create a poll
 
   @B29G38-164
   Scenario: User should be able to create a poll by adding questions and multiple answers.
-    When User creates a poll by adding "76yt" title and "how old are you?" and "recipient" and multiple answers"45".
+    When User creates a poll by adding "test" title and "how old are you?" and "recipient" and multiple answers"45".
     And user clicks send button.
 
 
@@ -30,4 +30,8 @@ Feature: As a user, I should be able to create a poll
     When User creates a poll by adding "8765" title and "how old are you?" and "" and multiple answers"34".
     When user does not specify "recipient"
     And user clicks send button.
-    Then user sees this Error message "Please specify at least one person."
+    Then user sees this Error message
+      | The message title is not specified       |
+      | Please specify at least one person.      |
+      | The question text is not specified.      |
+      | The question "........." has no answers. |
