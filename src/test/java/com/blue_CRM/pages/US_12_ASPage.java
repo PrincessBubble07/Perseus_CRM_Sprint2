@@ -19,9 +19,15 @@ public class US_12_ASPage {
     @FindBy(xpath = "(//span[@class='menu-popup-item-text'])[2]")
     public WebElement appreciationButton;
 
-    @FindBy(id = "bx-b-uploadfile-blogPostForm")
+    @FindBy(xpath = "//div[@id='post-buttons-bottom']/span[@id='bx-b-uploadfile-blogPostForm']")
     public WebElement uploadFilesButton;
 
-    @FindBy(xpath = "(//table[@class='diskuf-selector-table wd-fa-add-file-light-table'])[1]/tbody/tr[1]/td[1]")
+    @FindBy(xpath = "//table[@class='diskuf-selector-table wd-fa-add-file-light-table']//td[1]//input[@name='bxu_files[]']")
     public WebElement uploadFilesAndImagesButton;
+
+    @FindBy(xpath = "//tbody[@class='diskuf-placeholder-tbody']//td[4]//span[.='Insert in text']")
+    public WebElement insertInTextButton;
+
+    @FindBy(xpath = "//tbody[@class='diskuf-placeholder-tbody']//tr//td[5]//span")
+    public WebElement removeButton;
 }
