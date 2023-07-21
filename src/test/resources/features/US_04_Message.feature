@@ -1,11 +1,10 @@
-@US_04
+@B29G38-206
 Feature: User should be able to send messages
 
   Background: User is already in the log in page
     Given the user is on the login page
 
-
-  @US_04_TC1
+  @B29G38-201
   Scenario Outline: The message delivery should be set to 'All employees' by default
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
@@ -16,7 +15,7 @@ Feature: User should be able to send messages
       | help desk |
       | marketing |
 
-  @US_04_TC2
+  @B29G38-200
   Scenario Outline: The user should be able to send a message by filling in mandatory fields
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
@@ -31,7 +30,7 @@ Feature: User should be able to send messages
       | help desk |
       | marketing |
 
-  @US_04_TC3
+  @B29G38-202
   Scenario Outline: The user should see error message when attempting to send a message without a message body
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
@@ -45,7 +44,7 @@ Feature: User should be able to send messages
       | help desk |
       | marketing |
 
-  @US_04_TC4
+  @B29G38-203
   Scenario Outline: The user should see an error message when attempting to send a message without a recipient
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
@@ -59,7 +58,7 @@ Feature: User should be able to send messages
       | help desk |
       | marketing |
 
-  @US_04_TC5
+  @B29G38-204
   Scenario Outline: The user should be able to cancel sending message before adding a message body
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
@@ -71,7 +70,7 @@ Feature: User should be able to send messages
       | help desk |
       | marketing |
 
-  @US_04_TC6
+  @B29G38-205
   Scenario Outline: The user should be able to cancel sending message after adding a message body
     Given the user logged in as "<user>"
     And the user clicks the "Message" tab
