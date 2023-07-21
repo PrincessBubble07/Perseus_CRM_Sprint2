@@ -3,7 +3,7 @@ Feature: As a user, I want to access the Drive page
   Background: User is already in the log in page
     Given the user is on the login page
 
-  @us13
+  @B29G38-175
   Scenario Outline: Verify users can access the Driver page
     Given the user logged in as "<user>"
     When the user click on Drive
