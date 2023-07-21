@@ -5,17 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class US_04_MadeleinePage {
+public class US_04_MessagePage {
 
-    public US_04_MadeleinePage(){
+    public US_04_MessagePage(){
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//span[text()='Message']")
-    public WebElement messageButton;
-
-    @FindBy(className = "feed-add-post-destination-text")
-    public WebElement allEmployees;
 
     @FindBy(className = "bx-editor-iframe")
     public WebElement iframe;
@@ -32,36 +27,11 @@ public class US_04_MadeleinePage {
     @FindBy(id = "blog-submit-button-cancel")
     public WebElement cancelButton;
 
-    @FindBy(className = "feed-add-post-del-but")
-    public WebElement removeAllEmployees;
-
-    @FindBy(id = "bx-destination-tag")
+    @FindBy(xpath = "//a[@id='bx-destination-tag']")
     public WebElement addRecipientLink;
 
     @FindBy(id = "feed-add-post-destination-input")
     public WebElement enterRecipientTextBox;
-
-
-
-    @FindBy(xpath = "//span[text()='The message title is not specified']")
-    public WebElement blankMessageError;
-
-    @FindBy(xpath = "//span[text()='Please specify at least one person.']")
-    public WebElement noRecipientError;
-
-    @FindBy(xpath = "//span[text()='Send message …']")
-    public WebElement defaultSendMessageText;
-
-
-
-
-
-
-
-
-
-
-
 
 
 
