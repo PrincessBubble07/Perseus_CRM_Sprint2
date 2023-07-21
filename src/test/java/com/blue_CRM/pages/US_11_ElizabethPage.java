@@ -15,15 +15,15 @@ public class US_11_ElizabethPage {
     @FindBy(xpath = "//span[@id='feed-add-post-form-link-text']")
     public WebElement MoreTab;
 
-    @FindBy(xpath = "//span[@class='menu-popup-item-text']")
+    @FindBy(xpath = "//div[@id='popup-window-content-menu-popup-feed-add-post-form-popup']//div[@class='menu-popup-items']/span[2]")
 
     public WebElement AppreciationButton;
 
 
-    @FindBy(xpath = "//span[@id='blog-submit-button-cancel']")
+    @FindBy(xpath = "//button[@id='blog-submit-button-cancel']")
     public WebElement CancelBtn;
 
-    @FindBy(xpath = "//span[@id='blog-submit-button-save']")
+    @FindBy(xpath = "//button[@id='blog-submit-button-save']")
     public WebElement SendBtn;
 
     @FindBy(xpath = "//iframe[@class='bx-editor-iframe']")
@@ -32,17 +32,13 @@ public class US_11_ElizabethPage {
     @FindBy(xpath = "//body[@contenteditable='true']")
     public WebElement TextBox;
 
-    @FindBy(xpath = "//span[@class='feed-add-post-destination-text']")
+    @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
     public WebElement allEmployees;
 
-    @FindBy(xpath = "//span[text()='The message title is not specified']")
-    public WebElement ErrorMessage1;
+    @FindBy(xpath = "//div[@class='feed-add-error']/span[2]")
+    public WebElement ErrorMessage;
 
-    @FindBy(xpath = "//span[@class='feed-add-post-del-but']")
-    public WebElement AllEmployersCancelSign;
 
-    @FindBy(xpath = "//span[text()='Please specify at least one person.']")
-    public WebElement ErrorMessage2;
 
     @FindBy(id = "bx-destination-tag")
     public WebElement addRecipient;

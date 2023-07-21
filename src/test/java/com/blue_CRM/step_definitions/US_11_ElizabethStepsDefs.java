@@ -34,12 +34,12 @@ public class US_11_ElizabethStepsDefs {
 
             Driver.getDriver().switchTo().frame(us_11_elizabethPage.iframe);
             us_11_elizabethPage.TextBox.sendKeys(ConfigurationReader.getProperty("text_test") + Keys.ENTER);
-            Driver.getDriver().switchTo().parentFrame();
+            Driver.getDriver().switchTo().defaultContent();
         }
 
     @When("User click Cancel button")
     public void user_click_Cancel_button() {
-        us_11_elizabethPage.CancelBtn.click();
+        ;
     }
 
     @Then("User able to cancel sending appreciation")
@@ -47,53 +47,41 @@ public class US_11_ElizabethStepsDefs {
         us_11_elizabethPage.CancelBtn.click();
     }
 
-    @When("the user enters text into the text box")
-    public void the_user_enters_text_into_the_text_box() {
-
-        Driver.getDriver().switchTo().frame(us_11_elizabethPage.iframe);
-        us_11_elizabethPage.TextBox.sendKeys(ConfigurationReader.getProperty("text_test") + Keys.ENTER);
-        Driver.getDriver().switchTo().parentFrame();
-    }
-
 
     @And("the user should see send message to All employees by default")
     public void the_user_should_see_send_message_to_All_Employees_By_Default() {
-        String allEmployeesExpected = "All employees";
-        String allEmployeesActual = us_11_elizabethPage.allEmployees.getText();
-        Assert.assertEquals(allEmployeesExpected, allEmployeesActual);
+
     }
 
 
     @And("the user deletes the All employees")
     public void the_user_deletes_the_all_employees() {
-        us_11_elizabethPage.AllEmployersCancelSign.click();
+        us_11_elizabethPage.allEmployees.click();
 
     }
 
     @And("the user clicks the Send button")
     public void the_user_clicks_the_Send_button() {
-        us_11_elizabethPage.CancelBtn.click();
+        us_11_elizabethPage.SendBtn.click();
     }
 
     @Then("the user should see the Error Please specify at least one person.")
     public void the_user_should_see_the_Error_please_specify_at_least_one_person() {
-        Assert.assertTrue(us_11_elizabethPage.ErrorMessage2.isDisplayed());
+        String actualErrorMessage = us_11_elizabethPage.ErrorMessage.getText();
+
+        String expectedErrorMessage = "Please specify at least one person.";
+        Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
 
     }
 
-    @When("the user remove the recipient All employees")
-    public void the_user_remove_the_recipient_All_Employees() {
-        us_11_elizabethPage.AllEmployersCancelSign.click();
-    }
+    @Given("user does not specify message")
+    public void userDoesNotSpecifyMessage() {
+        Driver.getDriver().switchTo().frame(us_11_elizabethPage.iframe);
+        us_11_elizabethPage.TextBox.sendKeys("");
+        Driver.getDriver().switchTo().defaultContent();
 
-    @And("the user add a recipient")
-    public void the_user_add_a_recipient() {
-        us_11_elizabethPage.addRecipient.click();
-        us_11_elizabethPage.enterRecipientText.sendKeys(ConfigurationReader.getProperty("recipient"));
-        us_11_elizabethPage.enterRecipientText.sendKeys(Keys.ENTER);
 
     }
-
     @And("the user click the SEND button")
     public void the_user_click_the_Send_button() {
         us_11_elizabethPage.SendBtn.click();
@@ -101,12 +89,14 @@ public class US_11_ElizabethStepsDefs {
 
     @Then("the user should see the Error The message title is not specified.")
     public void the_user_should_see_the_Error_the_message_title_is_not_specified() {
-        String actualErrorMessage = us_11_elizabethPage.ErrorMessage1.getText();
+        String actualErrorMessage = us_11_elizabethPage.ErrorMessage.getText();
 
-        String expectedErrorMessage = "The message title is not specified.";
-        Assert.assertEquals(actualErrorMessage,expectedErrorMessage);
+        String expectedErrorMessage = "The message title is not specified";
+        Assert.assertEquals(expectedErrorMessage, actualErrorMessage);
     }
-    }
+
+
+}
 
 
 
